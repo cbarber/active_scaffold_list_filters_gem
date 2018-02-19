@@ -26,7 +26,7 @@ require 'active_scaffold_list_filters/list_filters/states_filter'
 
 module ActiveScaffoldListFilters
 
-  if Rails::VERSION::MAJOR <= 3
+  if Rails::VERSION::MAJOR < 3
     raise "This version of ActiveScaffoldListFilters requires Rails 3.0 or higher.  Please use an earlier version."
   else
     ActiveScaffold::Config::Core.send(:include, Extensions::Core)
